@@ -1,4 +1,4 @@
-# app.py - Simple Flask app with intentional issues
+# app.py - Simple Flask app with intentional 
 
 from flask import Flask, request
 import os
