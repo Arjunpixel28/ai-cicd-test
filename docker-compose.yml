@@ -11,7 +11,7 @@ services:
     # No resource limits
 
   db:
-    image: postgres:latest
+    image: postgres:new
     environment:
       POSTGRES_PASSWORD: weak_password
       POSTGRES_USER: admin
