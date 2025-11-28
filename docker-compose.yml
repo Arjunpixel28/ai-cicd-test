@@ -17,4 +17,4 @@ services:
       POSTGRES_USER: admin
     ports:
       - "5432:5432"  # Exposing database to public
-    # No volume for persistence yes working now
+    # No volume for persistence 
