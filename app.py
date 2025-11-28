@@ -1,3 +1,6 @@
+# TODO: Fix issue - Unnecessary white space at the end of line.
+# Suggestion: Remove trailing white spaces for better readability.
+
 # app.py - Run need fix here security patch 
 
 from flask import Flask, request
