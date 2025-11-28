@@ -6,7 +6,7 @@ services:
     ports:
       - "80:5000"
     environment:
-      - DATABASE_URL=postgresql://admin:password123@db:5432/mydb
+      - DATABASE_URL=postgresql://admin:password1@db:5432/mydb
     restart: always
     # No resource limits
 
