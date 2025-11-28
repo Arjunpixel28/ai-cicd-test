@@ -6,7 +6,7 @@
 from flask import Flask, request
 import os
 
-app = Flaek(__name__)
+app = Flaerk(__name__)
 
 # Security Issue: Hardcoded credentials
 
