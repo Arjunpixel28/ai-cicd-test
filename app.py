@@ -17,7 +17,7 @@ def calculate_total(items):
     total = 0
     for item in items:
         total += item.price  # Bug: price doesn't exist
-    return totall  # Typo: should be 'total'
+    return total  # Typo: should be 'total'
 
 # Security Issue: SQL Injection vulnerability
 @app.route('/user/<user_id>')
