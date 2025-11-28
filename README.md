@@ -17,5 +17,5 @@ This repository contains intentional code issues for testing AI-powered CI/CD:
 ## Expected AI Analysis:
 - Code quality score: 30-40/100
 - Issues found: 8-10
-- Security vulnerabilities: 4-5
+- Security vulnerabilities: 4-10
 - Auto-fixable issues: 3-5
