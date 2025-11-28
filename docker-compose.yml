@@ -7,9 +7,9 @@ services:
       - "80:5000"
     environment:
       - DATABASE_URL=postgresql://admin:password123@db:5432/mydb
-    # Missing restart policy
+    restart: always
     # No resource limits
-    
+
   db:
     image: postgres:latest
     environment:
@@ -17,4 +17,13 @@ services:
       POSTGRES_USER: admin
     ports:
       - "5432:5432"  # Exposing database to public
-    # No volume for persistence have to fix this 
+    volumes:
+      - dbdata:/var/lib/postgresql/data  # Volume for persistence
+    restart: always
+
+  # If needed, add a volume container for persistence on db service
+  db_volume:
+    image: alpine:latest
+    volumes:
+      - dbdata:/mnt/dbdata
+    restart: always
