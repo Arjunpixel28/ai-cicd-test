@@ -8,7 +8,7 @@ This repository contains intentional code issues for testing AI-powered CI/CD:
 3. **Security**: Exposed sensitive ports
 4. **Security**: Running as root in Docker
 5. **Bugs**: Variable typos and undefined attributes
-6. **Performance**: Inefficient nested loops
+6. **Best Performance**: Inefficient nested loops
 7. **Best Practices**: Missing error handling
 8. **Best Practices**: Debug mode in production
 9. **Docker**: No health checks or resource limits
