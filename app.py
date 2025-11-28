@@ -9,7 +9,7 @@ import os
 app = Flask(__name__)
 
 # Security Issue: Hardcoded credentials
-DATABASE_PASSWORD = "admin123"
+
 API_KEY = "sk-1234567890abcdef"
 
 # Bug: Variable typo
