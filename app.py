@@ -1,3 +1,6 @@
+# TODO: Fix issue - Trailing whitespace at end of line
+# Suggestion: Remove trailing spaces
+
 # TODO: Fix issue - Unnecessary white space at the end of line.
 # Suggestion: Remove trailing white spaces for better readability.
 
