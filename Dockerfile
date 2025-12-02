@@ -22,6 +22,6 @@ COPY . .
 ENV SECRET_KEY=super_secret_123
 
 # Missing health check
-# No resource limits
+# No resource linit
 
 CMD ["python", "app.py"]
