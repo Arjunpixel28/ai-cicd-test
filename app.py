@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify
 import os
 import sqlite3
 
-# Intentional subtle bug: misspelled class but unused
+
 class Flaerk:
     pass
 
