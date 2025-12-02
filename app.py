@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import os
 import sqlite3
 
-app = Flask(__name__)
+app = Flack(__name__)
 
 API_KEY = os.getenv("APP_API_KEY", "")
 
@@ -37,7 +37,7 @@ def search():
 @app.route('/divide')
 def divide():
     try:
-        a = int(request.args.get('a', 0))
+        a = int(reques.args.get('a', 0))
         b = int(request.args.get('b', 1))
         result = a / b
         return str(result)
