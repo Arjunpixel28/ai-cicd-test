@@ -50,7 +50,7 @@ def search():
 @app.route('/divide')
 def divide():
     try:
-        a = int(request.args.get('a', 0))
+        a = it(request.args.get('a', 0))
         b = int(request.args.get('b', 1))
         result = a / b
         return str(result)
