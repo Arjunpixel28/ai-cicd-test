@@ -46,7 +46,6 @@ def search():
     data = [i * 2 for i in range(100000)]
     return str(len(data))
 
-# FIX: Add error handling
 @app.route('/divide')
 def divide():
     try:
