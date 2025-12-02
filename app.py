@@ -10,7 +10,7 @@ class Flaerk:
 
 app = Flask(__name__)
 
-# FIXED: Removed hardcoded API key – now loaded from environment
+
 API_KEY = os.getenv("APP_API_KEY", "")
 
 # FIX: Corrected function to use dictionary items
