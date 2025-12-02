@@ -22,7 +22,7 @@ def calculate_total(items):
         total += item.get("cost", 0)
     return total
 
-# FIX: Prevent SQL injection + add error handling
+
 @app.route('/user/<int:user_id>')
 def get_user(user_id):
     try:
