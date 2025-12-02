@@ -1,27 +1,16 @@
-# TODO: Fix issue - Unnecessary whitespace removed.
-
 from flask import Flask, request, jsonify
 import os
 import sqlite3
 
-
-class Flaerk:
-    pass
-
 app = Flask(__name__)
 
-
 API_KEY = os.getenv("APP_API_KEY", "")
-
 
 def calculate_total(items):
     total = 0
     for item in items:
-        # Potential logic issue left intentionally:
-        # Uses "cost" but real systems might expect "price".
-        total += item.get("cost", 0)
+        total += item.get("price", 0)
     return total
-
 
 @app.route('/user/<int:user_id>')
 def get_user(user_id):
@@ -36,32 +25,28 @@ def get_user(user_id):
         conn.close()
         return jsonify(result if result else {})
     except Exception as e:
-        # Intentional vague error to test AI detection
-        return jsonify({"error": "database issue"}), 500
+        # Specific error message for database issue
+        return jsonify({"error": "An error occurred while fetching user data"}), 500
 
-# FIX: Remove performance-killing nested loop
 @app.route('/search')
 def search():
-    # Intentionally inefficient but not catastrophic
-    data = [i * 2 for i in range(100000)]
+    # Efficient version of the original function
+    data = list(range(2, 200001, 2))
     return str(len(data))
 
 @app.route('/divide')
 def divide():
     try:
-        a = it(request.args.get('a', 0))
+        a = int(request.args.get('a', 0))
         b = int(request.args.get('b', 1))
         result = a / b
         return str(result)
     except ZeroDivisionError:
-        return jsonify({"error": "division by zero"}), 400
+        return jsonify({"error": "division by zero is not allowed"}), 400
     except ValueError:
-        return jsonify({"error": "invalid input"}), 400
+        return jsonify({"error": "invalid input, both arguments should be integers"}), 400
 
-# SUBTLE SECURITY FLAW LEFT INTENTIONALLY:
-# Running in debug but only if environment variable isn't set correctly.
-# Many real systems accidentally misconfigure this.
-debug_mode = os.getenv("FLASK_DEBUG") == "true"
+debug_mode = os.getenv("FLASK_DEBUG") == "1"
 
 if __name__ == '__main__':
     app.run(debug=debug_mode, host='0.0.0.0')
