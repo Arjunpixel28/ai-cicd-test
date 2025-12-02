@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 API_KEY = os.getenv("APP_API_KEY", "")
 
-# FIX: Corrected function to use dictionary items
+
 def calculate_total(items):
     total = 0
     for item in items:
